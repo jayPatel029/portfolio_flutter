@@ -75,208 +75,6 @@ class ProjectsSection extends StatelessWidget {
   }
 }
 
-// class _ProjectCard extends StatelessWidget {
-//   final String title;
-//   final String description;
-//   final List<String> techStack;
-//   final String imageUrl;
-//   final String githubUrl;
-//   final String demoUrl;
-
-//   const _ProjectCard({
-//     required this.title,
-//     required this.description,
-//     required this.techStack,
-//     required this.imageUrl,
-//     required this.githubUrl,
-//     required this.demoUrl,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     final isMobile = ResponsiveBreakpoints.of(context).isMobile;
-
-//     return Container(
-//       margin: EdgeInsets.fromLTRB(0, 0,0,100),
-//       decoration: BoxDecoration(
-//         color: Colors.white,
-//         borderRadius: BorderRadius.circular(12),
-//         boxShadow: [
-//           BoxShadow(
-//             color: Colors.black.withOpacity(0.1),
-//             blurRadius: 8,
-//             offset: const Offset(0, 4),
-//           ),
-//         ],
-//       ),
-//       child: Column(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         mainAxisSize: MainAxisSize.min,
-//         children: [
-//           ClipRRect(
-//             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-//             child: AspectRatio(
-//               aspectRatio: 16 / 9,
-//               child: Stack(
-//                 children: [
-//                   Image.network(
-//                     imageUrl,
-//                     fit: BoxFit.cover,
-//                     width: double.infinity,
-//                   ),
-//                   Positioned(
-//                     top: 8,
-//                     right: 8,
-//                     child: Container(
-//                       padding: const EdgeInsets.symmetric(
-//                           horizontal: 6, vertical: 3),
-//                       decoration: BoxDecoration(
-//                         color: Colors.black.withOpacity(0.7),
-//                         borderRadius: BorderRadius.circular(15),
-//                       ),
-//                       child: Row(
-//                         mainAxisSize: MainAxisSize.min,
-//                         children: [
-//                           const FaIcon(
-//                             FontAwesomeIcons.code,
-//                             size: 10,
-//                             color: Colors.white,
-//                           ),
-//                           const SizedBox(width: 4),
-//                           Text(
-//                             techStack[0],
-//                             style: const TextStyle(
-//                               color: Colors.white,
-//                               fontSize: 10,
-//                               fontWeight: FontWeight.w500,
-//                             ),
-//                           ),
-//                         ],
-//                       ),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ),
-//           Padding(
-//             padding: EdgeInsets.all(isMobile ? 6 : 10),
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               mainAxisSize: MainAxisSize.min,
-//               children: [
-//                 Text(
-//                   title,
-//                   style: TextStyle(
-//                     fontSize: isMobile ? 14 : 16,
-//                     fontWeight: FontWeight.bold,
-//                   ),
-//                   maxLines: 1,
-//                   overflow: TextOverflow.ellipsis,
-//                 ),
-//                 const SizedBox(height: 6),
-//                 Text(
-//                   description,
-//                   style: TextStyle(
-//                     fontSize: isMobile ? 10 : 12,
-//                     color: Colors.grey[600],
-//                     height: 1.3,
-//                   ),
-//                   maxLines: 2,
-//                   overflow: TextOverflow.ellipsis,
-//                 ),
-//                 const SizedBox(height: 8),
-//                 Wrap(
-//                   spacing: 6,
-//                   runSpacing: 6,
-//                   children: techStack.map((tech) {
-//                     return Container(
-//                       padding: const EdgeInsets.symmetric(
-//                           horizontal: 8, vertical: 4),
-//                       decoration: BoxDecoration(
-//                         color: Colors.blue.withOpacity(0.1),
-//                         borderRadius: BorderRadius.circular(12),
-//                       ),
-//                       child: Text(
-//                         tech,
-//                         style: TextStyle(
-//                           color: Colors.blue[700],
-//                           fontSize: isMobile ? 8 : 10,
-//                           fontWeight: FontWeight.w500,
-//                         ),
-//                       ),
-//                     );
-//                   }).toList(),
-//                 ),
-//                 const SizedBox(height: 18),
-//                 Row(
-//                   children: [
-//                     Expanded(
-//                       child: ElevatedButton.icon(
-//                         onPressed: () => _launchUrl(githubUrl),
-//                         icon: FaIcon(
-//                           FontAwesomeIcons.github,
-//                           size: isMobile ? 10 : 12,
-//                         ),
-//                         label: Text(
-//                           'Code',
-//                           style: TextStyle(fontSize: isMobile ? 10 : 12),
-//                         ),
-//                         style: ElevatedButton.styleFrom(
-//                           backgroundColor: Colors.black,
-//                           foregroundColor: Colors.white,
-//                           padding: EdgeInsets.symmetric(
-//                             vertical: isMobile ? 6 : 8,
-//                           ),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(6),
-//                           ),
-//                         ),
-//                       ),
-//                     ),
-//                     const SizedBox(width: 8),
-//                     Expanded(
-//                       child: OutlinedButton.icon(
-//                         onPressed: () => _launchUrl(demoUrl),
-//                         icon: FaIcon(
-//                           FontAwesomeIcons.externalLinkAlt,
-//                           size: isMobile ? 10 : 12,
-//                         ),
-//                         label: Text(
-//                           'Demo',
-//                           style: TextStyle(fontSize: isMobile ? 10 : 12),
-//                         ),
-//                         style: OutlinedButton.styleFrom(
-//                           padding: EdgeInsets.symmetric(
-//                             vertical: isMobile ? 6 : 8,
-//                           ),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(6),
-//                           ),
-//                         ),
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-
-//   Future<void> _launchUrl(String url) async {
-//     final Uri uri = Uri.parse(url);
-//     if (await canLaunchUrl(uri)) {
-//       await launchUrl(uri);
-//     }
-//   }
-// }
-
-
-
-
 class _ProjectCard extends StatelessWidget {
   final String title;
   final String description;
@@ -299,7 +97,8 @@ class _ProjectCard extends StatelessWidget {
     final isMobile = ResponsiveBreakpoints.of(context).isMobile;
 
     return Card(
-      margin: EdgeInsets.symmetric(vertical: isMobile ? 82:  42), // Reduced & elegant spacing
+      margin: EdgeInsets.symmetric(
+          vertical: isMobile ? 82 : 42), // Reduced & elegant spacing
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
@@ -325,7 +124,8 @@ class _ProjectCard extends StatelessWidget {
                     top: 8,
                     right: 8,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 6, vertical: 3),
                       decoration: BoxDecoration(
                         color: Colors.black.withOpacity(0.7),
                         borderRadius: BorderRadius.circular(15),
@@ -333,7 +133,8 @@ class _ProjectCard extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const FaIcon(FontAwesomeIcons.code, size: 10, color: Colors.white),
+                          const FaIcon(FontAwesomeIcons.code,
+                              size: 10, color: Colors.white),
                           const SizedBox(width: 4),
                           Text(
                             techStack.isNotEmpty ? techStack[0] : '',
@@ -386,7 +187,8 @@ class _ProjectCard extends StatelessWidget {
                   runSpacing: 6,
                   children: techStack.map((tech) {
                     return Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: Colors.blue.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(12),
@@ -403,7 +205,7 @@ class _ProjectCard extends StatelessWidget {
                   }).toList(),
                 ),
 
-                 SizedBox(height: isMobile?30: 20),
+                SizedBox(height: isMobile ? 30 : 20),
 
                 // Buttons
                 Row(
@@ -434,7 +236,24 @@ class _ProjectCard extends StatelessWidget {
                     const SizedBox(width: 8),
                     Expanded(
                       child: OutlinedButton.icon(
-                        onPressed: () => _launchUrl(demoUrl),
+                        onPressed: () {
+                          if (demoUrl.isEmpty) {
+                            // Show a SnackBar if demoUrl is empty
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                    'Deployment is not yet done. Please check back later!'),
+                                behavior: SnackBarBehavior.floating,
+                                margin: EdgeInsets.symmetric(
+                                  horizontal: isMobile ? 20 : 100,
+                                  vertical: 20,
+                                ),
+                              ),
+                            );
+                          } else {
+                            _launchUrl(demoUrl);
+                          }
+                        },
                         icon: FaIcon(
                           FontAwesomeIcons.externalLinkAlt,
                           size: isMobile ? 12 : 14,

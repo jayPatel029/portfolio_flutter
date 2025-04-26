@@ -47,7 +47,17 @@ class PersonalInfo {
           'https://fakeimg.pl/300x200/a6a6a6/525252?text=Onboarding+System',
       'githubUrl':
           'https://github.com/jayPatel029/Automated-Candidate-Onboarding-System',
-      'demoUrl': '#',
+      'demoUrl': '',
+    },
+        {
+      'title': 'Credit Card Scraper',
+      'description':
+          'This project extracts credit card information either from web URLs or PDF documents using LLM (Groq API) and displays the results in a simple Streamlit web app.',
+      'techStack': ['Python', 'Web Scraping', 'LLM', 'Streamlit'],
+      'imageUrl': 'https://fakeimg.pl/300x200/a6a6a6/525252?text=Credit+Card+Scraper',
+      'githubUrl':
+          'https://github.com/jayPatel029/credit_ard_scraper_bh',
+      'demoUrl': '',
     },
     {
       'title': 'QR Code Counterfeit Detection',
@@ -57,7 +67,7 @@ class PersonalInfo {
       'imageUrl': 'https://fakeimg.pl/300x200/a6a6a6/525252?text=QR+Detection',
       'githubUrl':
           'https://github.com/jayPatel029/QR-Code-Authenticaiton-using-ML',
-      'demoUrl': '#',
+      'demoUrl': '',
     },
     {
       'title': 'Multi-Modal Emotion Recognition',
@@ -71,16 +81,7 @@ class PersonalInfo {
       'demoUrl':
           'https://drive.google.com/file/d/13V16cqKzv0VOzFo4fvVet9S08sUplgpe/view?usp=drive_link',
     },
-    {
-      'title': 'DocuVault',
-      'description':
-          'Secure document storage and retrieval web app with authentication and CRUD operations.',
-      'techStack': ['Flutter', 'Node.js', 'MongoDB', 'JWT'],
-      'imageUrl': 'https://fakeimg.pl/300x200/a6a6a6/525252?text=DocuVault',
-      'githubUrl':
-          'https://github.com/jayPatel029/DocuVault-Flutter-and-Nodejs-MongoDB',
-      'demoUrl': '#',
-    },
+
     //     {
     //   'title': 'DocuVault',
     //   'description': 'Secure document storage and retrieval web app with authentication and CRUD operations.',
@@ -133,6 +134,16 @@ class PersonalInfo {
       'techStack': ['Flutter', 'REST API'],
       'imageUrl': 'https://fakeimg.pl/300x200/a6a6a6/525252?text=Netflix+UI',
       'githubUrl': 'https://github.com/jayPatel029/movie-UI-flutter',
+      'demoUrl': '#',
+    },
+
+    {
+      'title': 'DocuVault',
+      'description':
+          'Secure document storage and retrieval web app with authentication and CRUD operations',
+      'techStack': ['Flutter', 'NodeJs', 'MongoDB'],
+      'imageUrl': 'https://fakeimg.pl/300x200/a6a6a6/525252?text=DocuVault',
+      'githubUrl': 'https://github.com/jayPatel029/DocuVault-Flutter-and-Nodejs-MongoDB',
       'demoUrl': '#',
     },
   ];
